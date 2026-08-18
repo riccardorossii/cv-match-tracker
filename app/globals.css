@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #141b2e;
+  --surface: #1b2540;
+  --surface-raised: #212c4b;
+  --hairline: #2e3a57;
+  --text: #edeff5;
+  --muted: #8d97b0;
+  --faint: #5c6786;
+  --amber: #f2a93b;
+  --teal: #3fb8af;
+  --coral: #e5573f;
+  --blue: #5b8def;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: var(--faint);
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
